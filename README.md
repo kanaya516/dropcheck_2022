@@ -1,4 +1,4 @@
-# dropcheck_2019
+# dropcheck_2022
 Let's Dropcheck !!!  
 * macOS（バージョン10.14.4で動作確認済）  
 * Python3系（3.7.3で動作確認済）
