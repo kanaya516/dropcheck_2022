@@ -6,7 +6,8 @@ Let's Dropcheck !!!
 ## 準備
 ### 各種インストール
 ```
-$ brew install mtr tmux 
+$ brew install mtr tmux
+$ brew install watch
 $ pip install -r requirements.txt
 ```
 ### config準備
@@ -18,8 +19,8 @@ $ vi config.yml //config.ymlにDNSサーバの情報を記入
 ## 構成
 
 ### dropcheck.sh
-後述の`dropcheck_tmuxp.yml`を呼び出すスクリプトです。  
-無線インターフェースが有効化されていた場合、無効にしてくれます。
+後述の`dropcheck_tmuxp.yml`を呼び出すスクリプトです．
+無線インターフェースが有効化されていた場合、無効にした上でドロップチェックを開始してくれます．
 
 `sudo dropcheck.sh`で実行してください。
 
