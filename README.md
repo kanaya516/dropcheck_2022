@@ -22,6 +22,10 @@ $ vi config.yml //config.ymlにDNSサーバの情報を記入
 後述の`dropcheck_tmuxp.yml`を呼び出すスクリプトです．
 無線インターフェースが有効化されていた場合、無効にした上でドロップチェックを開始してくれます．
 
+```
+chmod +x dropcheck.sh
+```
+した上で
 `sudo dropcheck.sh`で実行してください。
 
 ### dropcheck_tmux.yml
