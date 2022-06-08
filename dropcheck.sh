@@ -8,4 +8,4 @@ fi
 
 
 sudo tmuxp load dropcheck_tmux.yml
-open -a "Google Chrome" http://ipv4.google.com http://ipv6.google.com
+open -na "Google Chrome" --args --incognito http://ipv4.google.com http://ipv6.google.com
