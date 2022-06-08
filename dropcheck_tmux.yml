@@ -5,9 +5,9 @@ windows:
     layout: 90c2,231x69,0,0[231x34,0,0{57x34,0,0,51,57x34,58,0,57,57x34,116,0,55,57x34,174,0,56},231x34,0,35{57x34,0,35,52,57x34,58,35[57x17,58,35,58,57x16,58,53,59],57x34,116,35,53,57x34,174,35,54}]
     panes:
       - shell_command:
-        - netstat -rnA -f inet | grep default | awk '{print \$2}' | head -n 1 | xargs -L 1 -I@ ping @ -c 5 -D -s 1472
+        - netstat -rnA -f inet | grep default | awk '{print $2}' | head -n 1 | xargs -L 1 -I@ ping @ -c 5 -D -s 1472
       - shell_command:
-        - netstat -rnA -f inet6 | grep default | awk '{print \$2}' | head -n 1 | xargs -L 1 -I@ ping6 @ -c 5 -Dm -s 1452
+        - netstat -rnA -f inet6 | grep default | awk '{print $2}' | head -n 1 | xargs -L 1 -I@ ping6 @ -c 5 -Dm -s 1452
       - shell_command:
         - ping 1.1.1.1 -c 5 -D -s 1472
       - shell_command:
