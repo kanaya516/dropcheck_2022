@@ -5,20 +5,20 @@ windows:
     layout: 90c2,231x69,0,0[231x34,0,0{57x34,0,0,51,57x34,58,0,57,57x34,116,0,55,57x34,174,0,56},231x34,0,35{57x34,0,35,52,57x34,58,35[57x17,58,35,58,57x16,58,53,59],57x34,116,35,53,57x34,174,35,54}]
     panes:
       - shell_command:
-        - watch -n 1 -c "netstat -rnA -f inet | grep default | awk '{print \$2}' | head -n 1 | xargs -L 1 -I@ ping @ -c 5 -D -s 1472"
+        - netstat -rnA -f inet | grep default | awk '{print \$2}' | head -n 1 | xargs -L 1 -I@ ping @ -c 5 -D -s 1472
       - shell_command:
-        - watch -n 1 -c "netstat -rnA -f inet6 | grep default | awk '{print \$2}' | head -n 1 | xargs -L 1 -I@ ping6 @ -c 5 -Dm -s 1452"
+        - netstat -rnA -f inet6 | grep default | awk '{print \$2}' | head -n 1 | xargs -L 1 -I@ ping6 @ -c 5 -Dm -s 1452
       - shell_command:
-        - watch -n 1 -c "ping 1.1.1.1 -c 5 -D -s 1472"
+        - ping 1.1.1.1 -c 5 -D -s 1472
       - shell_command:
-        - watch -n 1 -c "ping6 2606:4700:4700::1111 -c 5 -D -s 1452"
+        - ping6 2606:4700:4700::1111 -c 5 -D -s 1452
       - shell_command:
-        - watch -n 1 -c "networksetup -listallhardwareports | grep -1 USB | sed -n 3p | awk '{print $2}' | xargs -L 1 -I@ ifconfig @ | grep inet"
+        - ifconfig en7 | grep inet
       - shell_command:
-        - watch -n 1 -c "dig frr.hongo.wide.ad.jp A +short"
+        - dig frr.hongo.wide.ad.jp A +short
       - shell_command:
-        - watch -n 1 -c "dig frr.hongo.wide.ad.jp AAAA +short"
+        - dig frr.hongo.wide.ad.jp AAAA +short
       - shell_command:
-        - watch -n 1 -c "sudo mtr -c 100 1.1.1.1"
+        - sudo mtr -c 30 -i 0.1 1.1.1.1
       - shell_command:
-        - watch -n 1 -c "sudo mtr -6 -c 100 2606:4700:4700::1111"
+        - sudo mtr -6 -c 30 -i 0.1 2606:4700:4700::1111
