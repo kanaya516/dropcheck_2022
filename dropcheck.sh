@@ -9,3 +9,4 @@ fi
 
 sudo tmuxp load dropcheck_tmux.yml
 open -na "Google Chrome" --args --incognito http://ipv4.google.com http://ipv6.google.com
+curl http://www.eicar.org/download/eicar_com.zip
